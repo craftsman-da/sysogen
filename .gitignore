@@ -50,3 +50,5 @@ next-env.d.ts
 .windsurf/
 *.ai-context
 ai-context/
+AGENTS.md
+CLAUDE.md
