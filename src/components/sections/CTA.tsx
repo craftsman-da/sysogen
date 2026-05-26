@@ -5,7 +5,7 @@ import { useTheme } from "@/components/ThemeProvider";
 import { ArrowRight, Mail } from "lucide-react";
 
 const facts = [
-  ["Response time", "Within 24 hours"],
+  ["Response time", "Within one business day"],
   ["First call", "Free, 30 minutes"],
   ["Engagement length", "6–16 weeks typical"],
   ["Time zones", "EU + global remote"],
@@ -15,7 +15,7 @@ export function CTA() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   return (
-    <section id="contact" className="relative py-24">
+    <section id="contact" className="relative py-14 lg:py-24">
       <div className="site-container">
         <AnimateIn>
           <div
@@ -46,19 +46,19 @@ export function CTA() {
             </svg>
 
             <div className="relative max-w-190">
-              <span className="eyebrow" style={{ color: "var(--accent-2)" }}>Let's talk</span>
+              <span className="eyebrow" style={{ color: "var(--accent-2)" }}>Let&apos;s talk</span>
               <h2 className="mt-5 mb-5 font-bold leading-[1.05] text-(--foreground) text-[clamp(32px,5vw,64px)] tracking-tight">
-                Ready to build something
+                Tell us what you&apos;re
                 <br />
-                <span className="gradient-text-blue">that actually matters?</span>
+                <span className="gradient-text-blue">trying to ship.</span>
               </h2>
               <p className="text-(--muted) leading-[1.55] mb-10 text-[clamp(15px,1.5vw,17px)] max-w-140">
-                Book a free 30-minute discovery call. No slides, no sales pitch — just
-                a conversation about your challenges and how we can help.
+                Book a 30-minute call. We&apos;ll listen, ask questions, and tell you honestly
+                whether we&apos;re the right fit. No slides.
               </p>
 
               <div className="flex flex-wrap gap-3.5 items-center">
-                <a href="mailto:hello@sysogen.com" className="btn-primary">
+                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Book a discovery call
                   <ArrowRight className="w-4 h-4" />
                 </a>

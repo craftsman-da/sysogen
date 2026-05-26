@@ -2,21 +2,21 @@
 
 import { AnimateIn } from "@/components/AnimateIn";
 import { useTheme } from "@/components/ThemeProvider";
-import { ArrowRight, ShieldCheck, GitCommit, FileText, Terminal, ClipboardList, Plus } from "lucide-react";
+import { ArrowRight, ShieldCheck, GitCommit, FileText, Terminal, ClipboardList, Server } from "lucide-react";
 
 const provestackFeatures = [
-  { label: "Cryptographic watermarking at generation time", icon: ShieldCheck },
-  { label: "Per-commit signing — model, prompt, reviewer",  icon: GitCommit },
-  { label: "Article 50 provenance manifests, on demand",    icon: FileText },
-  { label: "Verifier CLI for auditors and CI pipelines",    icon: Terminal },
+  { label: "Cryptographic signature embedded at generation time", icon: ShieldCheck },
+  { label: "Per-commit manifest: model, prompt, reviewer, CI run",  icon: GitCommit },
+  { label: "Verifier CLI for auditors and CI pipelines — no infra access required", icon: Terminal },
   { label: "Tamper-evident audit log, exportable",          icon: ClipboardList },
+  { label: "Self-hosted proxy: your prompts never reach our cloud", icon: Server },
 ];
 
 const ledgerRows = [
-  { id: "a4f2…91d", model: "claude-sonnet-4.5",  file: "auth/jwt.ts",       sig: "verified",  color: "#4ade80" },
-  { id: "b71e…04c", model: "gpt-5-codex",         file: "api/users.py",      sig: "verified",  color: "#4ade80" },
+  { id: "a4f2…91d", model: "claude-sonnet-4.6",  file: "auth/jwt.ts",       sig: "verified",  color: "#4ade80" },
+  { id: "b71e…04c", model: "gpt-5.1-codex",       file: "api/users.py",      sig: "verified",  color: "#4ade80" },
   { id: "c08a…f23", model: "human",               file: "lib/crypto.ts",     sig: "—",         color: "#9AA3B8" },
-  { id: "d9c1…7b2", model: "claude-sonnet-4.5",  file: "web/checkout.tsx",  sig: "verified",  color: "#4ade80" },
+  { id: "d9c1…7b2", model: "claude-sonnet-4.6",  file: "web/checkout.tsx",  sig: "verified",  color: "#4ade80" },
   { id: "e442…aa9", model: "unknown",             file: "jobs/sync.go",      sig: "unsigned",  color: "#F47174" },
 ];
 
@@ -26,7 +26,7 @@ export function Workshop() {
   return (
     <section
       id="labs"
-      className="relative border-t border-b border-(--border) py-20"
+      className="relative border-t border-b border-(--border) py-12 lg:py-20"
       style={{
         background:
           "radial-gradient(800px 500px at 80% 10%,rgba(232,177,74,0.06),transparent 60%)," +
@@ -51,11 +51,10 @@ export function Workshop() {
             <span className="eyebrow" style={{ color: "var(--gold)" }}>Sysogen Labs</span>
             <div className="flex flex-wrap items-end gap-x-16 gap-y-4 mt-4">
               <h2 className="font-bold tracking-tight leading-[1.1] text-(--foreground) shrink-0 text-[clamp(32px,3.5vw,52px)]">
-                From our workshop.
+                Built in-house.
               </h2>
               <p className="text-(--muted) text-[15px] leading-relaxed max-w-100">
-                Products built in-house — to solve problems we keep seeing, and to
-                demonstrate the engineering bar we hold ourselves to.
+                Tools we ship for our own engagements. Available to teams that need them.
               </p>
             </div>
           </div>
@@ -97,24 +96,24 @@ export function Workshop() {
                     }}
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-(--gold)" />
-                    NEW · EARLY ACCESS
+                    EARLY ACCESS · LIMITED COHORT
                   </span>
                 </div>
 
                 <p className="font-mono-custom text-[11px] tracking-[0.14em] uppercase mb-3.5" style={{ color: "var(--accent-2)" }}>
-                  Shipping under the EU AI Act · Article 50 provenance, done.
+                  Built for EU AI Act Article 50 · SOC 2 · ISO 42001
                 </p>
 
                 <h3 className="font-medium leading-[1.1] mb-4 text-(--foreground) text-[clamp(22px,2.5vw,32px)] tracking-tight">
-                  Every line of AI code,{" "}
+                  Every line of AI-generated code,{" "}
                   <br />
-                  <span className="gradient-text">cryptographically accounted for.</span>
+                  <span className="gradient-text">cryptographically signed.</span>
                 </h3>
 
                 <p className="text-[15px] text-(--muted) leading-[1.65] mb-7 max-w-120">
-                  ProveStack watermarks, signs, and verifies code the moment a model
-                  writes it — so your auditor, your regulator, and your future self can
-                  prove exactly what shipped, by which model, under whose review.
+                  ProveStack signs AI-generated code at the moment a model writes it — so
+                  your auditor, your regulator, and your future self can answer "which lines
+                  came from which model, when, under whose review?"
                 </p>
 
                 <ul className="grid gap-2.5 mb-8">
@@ -126,10 +125,15 @@ export function Workshop() {
                   ))}
                 </ul>
 
-                <a href="#contact" className="btn-primary">
-                  Join the waitlist
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a href="/labs/provestack#waitlist" className="btn-primary">
+                    Join the waitlist
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                  <a href="/labs/provestack" className="btn-ghost">
+                    Read the docs
+                  </a>
+                </div>
               </div>
 
               {/* Right: mock ledger */}
@@ -196,7 +200,7 @@ export function Workshop() {
           </div>
         </AnimateIn>
 
-        {/* Smaller cards */}
+        {/* Smaller cards — InboxGraph only */}
         <AnimateIn delay={0.15}>
           <div className="grid sm:grid-cols-2 gap-3.5">
             {/* InboxGraph */}
@@ -206,11 +210,12 @@ export function Workshop() {
                   <InboxGraphMark />
                   <span className="text-base font-semibold tracking-tight text-(--foreground)">InboxGraph</span>
                 </div>
-                <span className="font-mono-custom text-[10px] text-(--ink-mute) tracking-widest">R&amp;D</span>
+                <span className="font-mono-custom text-[10px] text-(--ink-mute) tracking-widest">RESEARCH PREVIEW</span>
               </div>
               <p className="text-sm text-(--muted) mb-5 leading-relaxed">
-                Privacy-first email intelligence. Local-first architecture, no cloud
-                dependency. AI-powered analytics that never leaves your machine.
+                Email graph analysis that runs entirely on your machine. No cloud,
+                no telemetry, no copies of your inbox sent anywhere. We use it internally;
+                we&apos;re polishing it for release.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Local-first", "On-device", "Zero telemetry"].map((t) => (
@@ -221,30 +226,6 @@ export function Workshop() {
                     {t}
                   </span>
                 ))}
-              </div>
-            </div>
-
-            {/* Coming soon */}
-            <div className="card-base p-8 relative overflow-hidden">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 opacity-50"
-                style={{
-                  background: "repeating-linear-gradient(45deg,transparent 0 8px,rgba(255,255,255,0.025) 8px 9px)",
-                }}
-              />
-              <div className="relative">
-                <div className="flex justify-between items-center mb-5">
-                  <div className="w-7 h-7 rounded-md border border-dashed border-(--border-strong) inline-flex items-center justify-center text-(--ink-mute)">
-                    <Plus className="w-3.5 h-3.5" strokeWidth={1.5} />
-                  </div>
-                  <span className="font-mono-custom text-[10px] text-(--ink-mute) tracking-widest">TBA</span>
-                </div>
-                <h3 className="text-base font-semibold mb-2 text-(--foreground)">More coming soon</h3>
-                <p className="text-sm text-(--muted) leading-relaxed">
-                  We're prototyping a third tool focused on developer-platform
-                  observability for AI workloads. Stay tuned.
-                </p>
               </div>
             </div>
           </div>

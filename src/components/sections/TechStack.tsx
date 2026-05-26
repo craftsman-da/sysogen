@@ -4,11 +4,18 @@ import { AnimateIn } from "@/components/AnimateIn";
 import { useTheme } from "@/components/ThemeProvider";
 
 const cats = [
-  { label: "Languages & Frameworks", items: ["Java", "Spring Boot", "Kotlin", "Rust", "Python", "TypeScript"] },
-  { label: "Infrastructure",         items: ["Kubernetes", "AWS / EKS", "Terraform", "Docker", "Helm", "KEDA"] },
-  { label: "Data & Messaging",       items: ["Kafka", "PostgreSQL", "Redis", "Elasticsearch", "Pulsar", "ClickHouse"] },
-  { label: "AI / ML",                items: ["LangChain", "RAG pipelines", "OpenAI API", "Anthropic API", "Vector DBs", "PyTorch"] },
-  { label: "DevOps",                 items: ["Jenkins", "GitHub Actions", "ArgoCD", "Vault", "Prometheus", "Grafana"] },
+  {
+    label: "AI & LLM Ops",
+    items: ["Anthropic API (Claude)", "OpenAI API", "LangChain", "Private RAG (pgvector, Qdrant)", "ProveStack (in-house)"],
+  },
+  {
+    label: "Production Engineering",
+    items: ["Java / Spring Boot", "Kotlin", "Rust", "PostgreSQL", "Event-driven (Kafka, CQRS)"],
+  },
+  {
+    label: "Infrastructure",
+    items: ["Kubernetes (EKS)", "Terraform", "Vault", "Prometheus + Grafana", "GitHub Actions"],
+  },
 ];
 
 export function TechStack() {
@@ -17,7 +24,7 @@ export function TechStack() {
   return (
     <section
       id="stack"
-      className="relative py-20"
+      className="relative py-12 lg:py-20"
       style={{
         background: isDark
           ? "linear-gradient(180deg,transparent,rgba(11,16,32,0.4) 30%,rgba(11,16,32,0.4) 70%,transparent)"
@@ -30,7 +37,7 @@ export function TechStack() {
         <AnimateIn>
           <div className="flex flex-wrap justify-between items-end gap-6 mb-12">
             <div className="max-w-160">
-              <span className="eyebrow">Our technology DNA</span>
+              <span className="eyebrow">Our Tech Stack</span>
               <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
                 The stack we know
                 <br />
@@ -38,8 +45,7 @@ export function TechStack() {
               </h2>
             </div>
             <p className="text-(--muted) text-sm leading-relaxed max-w-80">
-              We pick tools because they're right for the job — not because
-              they're trending on Hacker News.
+              Three categories. The tools we reach for when correctness and auditability both matter.
             </p>
           </div>
         </AnimateIn>
@@ -49,13 +55,13 @@ export function TechStack() {
             {cats.map((cat, i) => (
               <div
                 key={cat.label}
-                className="grid items-center gap-5 px-7 py-5"
+                className="flex flex-col gap-2.5 px-5 py-5 lg:grid lg:items-center lg:gap-5 lg:px-7"
                 style={{
                   gridTemplateColumns: "220px 1fr",
                   borderTop: i === 0 ? "none" : "1px solid var(--border)",
                 }}
               >
-                <div className="font-mono-custom text-[11px] text-(--ink-dim) tracking-[0.12em] uppercase">
+                <div className="font-mono-custom text-[11px] text-(--ink-dim) tracking-[0.12em] uppercase shrink-0">
                   {cat.label}
                 </div>
                 <div className="flex flex-wrap gap-x-5 gap-y-2.5">

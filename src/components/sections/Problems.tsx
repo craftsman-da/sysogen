@@ -19,8 +19,8 @@ const problems = [
   },
   {
     n: "03",
-    title: "Legacy systems blocking transformation",
-    body: "Monoliths from 2014. Java 8 in production. A single Postgres holding everyone hostage. AI integration is impossible until the foundation is fixed.",
+    title: "No provenance, no audit trail",
+    body: "Auditors ask which lines of code came from which model, when, under whose review — and the engineering team can't answer. With the EU AI Act now in force, that's a regulatory exposure, not just a documentation gap.",
     icon: LayoutGrid,
   },
   {
@@ -33,12 +33,12 @@ const problems = [
 
 export function Problems() {
   return (
-    <section id="problem" className="relative py-20">
+    <section id="problem" className="relative py-12 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="flex flex-wrap justify-between items-end gap-6 mb-14">
             <div className="max-w-180">
-              <span className="eyebrow">The AI Adoption Gap</span>
+              <span className="eyebrow">Where AI Adoption Breaks Down</span>
               <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
                 Most enterprise AI initiatives fail
                 <br className="hidden sm:block" /> in the same four ways.

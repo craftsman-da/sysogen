@@ -29,19 +29,44 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sysogen — Engineering Intelligent Systems",
+  title: {
+    default: "Sysogen — AI you can ship, and prove you shipped responsibly",
+    template: "%s | Sysogen",
+  },
   description:
-    "Sysogen is a boutique consultancy that helps enterprises adopt AI properly — deep systems-level integration, governance, and engineering. Not bolted-on chat widgets. Production infrastructure, built right.",
-  keywords: [
-    "AI consultancy",
-    "enterprise AI",
-    "AI governance",
-    "software engineering",
-    "EU AI Act",
-    "Sysogen",
-  ],
+    "Sysogen helps regulated enterprises adopt AI without the security and compliance debt. EU AI Act Article 50 provenance, production engineering, and AI governance consultancy. Headquartered in Coimbra, Portugal.",
   icons: {
     icon: "/Sysogen.svg",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://sysogen.com",
+    siteName: "Sysogen",
+    title: "Sysogen — AI you can ship, and prove you shipped responsibly",
+    description:
+      "Sysogen helps regulated enterprises adopt AI without security and compliance debt. EU AI Act Article 50 compliance, ProveStack AI provenance, enterprise AI governance.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sysogen — AI you can ship, and prove you shipped responsibly",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sysogen — AI you can ship, and prove you shipped responsibly",
+    description:
+      "EU-headquartered engineering consultancy. AI governance, ProveStack code provenance, production-grade systems for regulated industries.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://sysogen.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

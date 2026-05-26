@@ -22,8 +22,8 @@ const steps = [
   },
   {
     n: "04",
-    title: "Evolve",
-    body: "We transfer knowledge, establish governance, and set you up for independence. Consultants, not contractors.",
+    title: "Handover",
+    body: "We transfer knowledge, document the systems, and pair-program until your team owns it. You inherit a codebase, not a dependency.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function Engagement() {
   return (
     <section
       id="approach"
-      className="relative py-20"
+      className="relative py-12 lg:py-20"
       style={{
         background: isDark
           ? "linear-gradient(180deg,transparent,rgba(11,16,32,0.5) 30%,rgba(11,16,32,0.5) 70%,transparent)"
@@ -46,15 +46,15 @@ export function Engagement() {
         <AnimateIn>
           <div className="flex flex-wrap justify-between items-end gap-6 mb-16">
             <div className="max-w-160">
-              <span className="eyebrow">How we work with you</span>
+              <span className="eyebrow">How We Work</span>
               <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
-                An engagement model designed
-                <br className="hidden lg:block" /> to make us unnecessary.
+                An engagement model that delivers
+                <br className="hidden lg:block" /> working systems, then transfers ownership.
               </h2>
             </div>
             <p className="text-(--muted) text-[15px] leading-relaxed max-w-80">
               Engagements typically run 6–16 weeks. We embed, ship, document,
-              and leave your team stronger.
+              and leave a foundation your team owns.
             </p>
           </div>
         </AnimateIn>

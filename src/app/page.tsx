@@ -4,9 +4,9 @@ import { Services } from "@/components/sections/Services";
 import { Engagement } from "@/components/sections/Engagement";
 import { Workshop } from "@/components/sections/Workshop";
 import { TrustSignals } from "@/components/sections/TrustSignals";
-import { Founder } from "@/components/sections/Founder";
-import { CaseStudies } from "@/components/sections/CaseStudies";
+import { WhyTrust } from "@/components/sections/WhyTrust";
 import { TechStack } from "@/components/sections/TechStack";
+import { TeamLink } from "@/components/sections/TeamLink";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -18,9 +18,9 @@ export default function Home() {
       <Engagement />
       <Workshop />
       <TrustSignals />
-      <Founder />
-      <CaseStudies />
+      <WhyTrust />
       <TechStack />
+      <TeamLink />
       <CTA />
     </div>
   );

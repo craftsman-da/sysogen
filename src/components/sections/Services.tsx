@@ -8,50 +8,46 @@ const pillars = [
   {
     tag: "PILLAR 01",
     title: "AI Adoption & Governance",
-    lead: "Adopt AI at scale — securely, responsibly, measurably.",
+    lead: "Stop Shadow AI. Get measurable ROI. Survive the next audit.",
     accent: "var(--accent)",
     accentBg: "rgba(79,140,255,0.1)",
     accentBorder: "rgba(79,140,255,0.28)",
     icon: ShieldCheck,
     bullets: [
-      "Shadow AI audits and policy frameworks",
-      "AI tool evaluation and vendor selection",
-      "Custom AI integration into existing workflows",
-      "Governance and compliance (EU AI Act ready)",
-      "ROI measurement and reporting dashboards",
+      "Shadow-AI inventory and policy framework (4–6 weeks)",
+      "Vendor selection and contract review (Anthropic, OpenAI, AWS Bedrock, Azure OpenAI)",
+      "EU AI Act readiness assessment with remediation roadmap",
+      "Provenance instrumentation via ProveStack (optional)",
     ],
   },
   {
     tag: "PILLAR 02",
-    title: "Enterprise Software Engineering",
-    lead: "Build, modernize, and scale the systems your business runs on.",
+    title: "Production Engineering",
+    lead: "Build the systems your AI ambitions assume already exist.",
     accent: "var(--accent-2)",
     accentBg: "rgba(34,211,238,0.1)",
     accentBorder: "rgba(34,211,238,0.28)",
     icon: Code2,
     bullets: [
-      "Java / Spring Boot microservices architecture",
-      "Cloud-native infrastructure (AWS/EKS, Kubernetes, Terraform)",
-      "Event-driven systems with Kafka",
-      "Legacy modernization and migration",
-      "CI/CD pipeline engineering and DevOps",
-      "Database architecture and optimization",
+      "Event-driven architecture on Kafka and Postgres",
+      "Kubernetes / EKS migrations and cost optimization",
+      "Zero-downtime database refactors (we've moved 90M+ row tables without a maintenance window)",
+      "CI/CD with provenance baked in — every artifact signed, every deploy auditable",
     ],
   },
   {
     tag: "PILLAR 03",
-    title: "AI Engineering & Custom Solutions",
-    lead: "Custom AI tools and pipelines tailored to your business.",
+    title: "AI Engineering",
+    lead: "Custom tooling for real teams, not demo-ware.",
     accent: "var(--gold)",
     accentBg: "rgba(232,177,74,0.1)",
     accentBorder: "rgba(232,177,74,0.28)",
     icon: Cpu,
     bullets: [
-      "RAG pipelines and knowledge management systems",
-      "LLM integration and fine-tuning",
-      "AI-powered automation workflows",
-      "Data pipelines for ML/AI workloads",
-      "Internal AI tooling and developer platforms",
+      "Internal AI assistants with controlled retrieval (no public-model leakage)",
+      "RAG pipelines on private corpora",
+      "Provenance and audit instrumentation for AI-generated code",
+      "Developer-facing tooling (CLI, IDE extensions, CI integrations)",
     ],
   },
 ];
@@ -60,15 +56,15 @@ export function Services() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="services" className="relative py-20">
+    <section id="services" className="relative py-12 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="mb-14 max-w-180">
-            <span className="eyebrow">How we help</span>
+            <span className="eyebrow">What We Do</span>
             <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
-              Three deep specialties.
+              Three specialties,
               <br />
-              No generalist filler.
+              picked because they compound.
             </h2>
           </div>
         </AnimateIn>

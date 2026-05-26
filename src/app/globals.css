@@ -133,7 +133,7 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--ink-mute);
+    color: #cdc2c2;
     font-family: var(--font-mono, monospace);
   }
 

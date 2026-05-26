@@ -6,48 +6,48 @@ import { Building2, Code2, Layers, Lock, BookOpen, Globe } from "lucide-react";
 
 const items = [
   {
-    title: "9+ years building production systems",
-    body: "Our founder has built and maintained systems processing millions of transactions at companies like Ford, GLS, and Kinship. Real infrastructure at scale.",
+    title: "Senior engineers, regulated-industry experience",
+    body: "Our team has shipped production systems for regulated industries — finance, logistics, healthcare, public sector — with real infrastructure, real audits, and real on-call rotations.",
     icon: Building2,
   },
   {
-    title: "We ship, not slide",
-    body: "Our deliverable is working code in your repo, not a PowerPoint deck. We write tests, not roadmap slides.",
+    title: "We ship code, not slides",
+    body: "Our deliverable is working software in your repo. We write tests, run on-call shifts, and pair with your team — not roadmap decks.",
     icon: Code2,
   },
   {
     title: "Deep, not wide",
-    body: "We specialize in JVM ecosystems, event-driven architecture, and AI integration. We don't pretend to do everything.",
+    body: "We specialize in event-driven architecture, EU-regulated AI deployments, and provenance for AI-generated code. We don't pretend to do everything.",
     icon: Layers,
   },
   {
-    title: "Security & governance first",
-    body: "Every system we build is designed for auditability, compliance, and zero-trust from day one — not bolted on later.",
+    title: "Security and governance first",
+    body: "Every system we deliver is designed for auditability and zero-trust from day one. SOC 2 controls, EU AI Act Article 50 evidence, and signed-commit provenance are built in — not bolted on.",
     icon: Lock,
   },
   {
     title: "Knowledge transfer built in",
-    body: "We document, pair-program, and train your team. When we leave, your team is stronger — not dependent.",
+    body: "We document as we build, pair-program with your engineers, and run a structured handover. When the engagement ends, your team owns the system.",
     icon: BookOpen,
   },
   {
-    title: "EU-based, EU-compliant",
-    body: "Headquartered in Portugal (NIF 519018265). We understand GDPR, the EU AI Act, and European regulatory requirements natively.",
+    title: "EU-based, EU-regulated",
+    body: "Headquartered in Coimbra, Portugal (NIF 519018265, CAE 62201). We work natively with GDPR, the EU AI Act, NIS2, and the upcoming Digital Operational Resilience Act (DORA).",
     icon: Globe,
   },
 ];
 
 export function TrustSignals() {
   return (
-    <section id="why" className="relative py-20">
+    <section id="why" className="relative py-12 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="mb-14 max-w-180">
-            <span className="eyebrow">Why companies choose Sysogen</span>
+            <span className="eyebrow">Why Sysogen</span>
             <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
-              Quiet confidence.
+              Engineering-led,
               <br />
-              Production-grade output.
+              EU-compliant, paid for outcomes.
             </h2>
           </div>
         </AnimateIn>

@@ -8,11 +8,12 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
-  { label: "Labs", href: "#labs" },
-  { label: "Results", href: "#results" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Labs", href: "/labs" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -46,13 +47,13 @@ export function Header() {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="px-3.5 py-2 text-[13.5px] text-[var(--ink-dim)] hover:text-[var(--foreground)] hover:bg-white/5 rounded-lg transition-all duration-150 font-medium"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -72,13 +73,13 @@ export function Header() {
               </button>
 
               {/* CTA */}
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-[13.5px] font-semibold text-white bg-(--accent) hover:bg-[#3a7aff] rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-(--accent)/25 hover:-translate-y-px"
               >
                 Book a Call
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
 
               {/* Mobile menu toggle */}
               <button
@@ -123,24 +124,24 @@ export function Header() {
 
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className="px-4 py-3 text-[var(--foreground)] hover:text-[var(--accent)] font-medium rounded-lg hover:bg-[var(--card)] transition-colors text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <div className="pt-4 mt-3 border-t border-[var(--border)]">
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/contact"
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center justify-center gap-2 px-4 py-3 font-semibold text-white bg-[var(--accent)] rounded-[10px] transition-all text-sm"
                   >
                     Book a Call
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
