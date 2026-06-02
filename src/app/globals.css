@@ -133,8 +133,14 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #cdc2c2;
+    color: #1E3A8A;
     font-family: var(--font-mono, monospace);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .dark .eyebrow {
+    color: #cdc2c2;
   }
 
   /* ── Live dot ─────────────────────────────────────────────────────────── */

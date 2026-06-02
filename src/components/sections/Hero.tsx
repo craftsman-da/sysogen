@@ -97,9 +97,11 @@ export function Hero() {
         {/* Headline */}
         <AnimateIn delay={0.1}>
           <h1 className='font-bold tracking-tight leading-[1.05] text-(--foreground) text-[clamp(44px,6vw,96px)] max-w-300'>
-            AI you can ship —
+            AI you can ship
             <br />
-            <span className='gradient-text'>and prove you shipped responsibly.</span>
+            <span className='gradient-text'>
+              and prove you shipped responsibly.
+            </span>
           </h1>
         </AnimateIn>
 
