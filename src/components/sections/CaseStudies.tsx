@@ -69,7 +69,7 @@ export function CaseStudies() {
 
               <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1.4fr_0.6fr]">
                 {/* Col 1 */}
-                <div className="p-8 pl-10 md:border-r border-b md:border-b-0 border-(--border)">
+                <div className="p-4 md:p-8 md:pl-10 md:border-r border-b md:border-b-0 border-(--border)">
                   <span className="font-mono-custom text-[10.5px] text-(--ink-mute) tracking-[0.14em] uppercase">
                     {c.tag}
                   </span>
@@ -79,7 +79,7 @@ export function CaseStudies() {
                 </div>
 
                 {/* Col 2 */}
-                <div className="p-8 md:border-r border-b md:border-b-0 border-(--border) grid gap-4">
+                <div className="p-4 md:p-8 md:border-r border-b md:border-b-0 border-(--border) grid gap-4">
                   <div>
                     <div className="font-mono-custom text-[10px] text-(--ink-mute) tracking-widest uppercase mb-1.5">
                       Challenge
@@ -95,7 +95,7 @@ export function CaseStudies() {
                 </div>
 
                 {/* Col 3 */}
-                <div className="p-8 flex flex-col justify-between gap-4">
+                <div className="p-4 md:p-8 flex flex-col justify-between gap-4">
                   <div>
                     <div
                       className="font-medium leading-none mb-2 text-[clamp(40px,4vw,56px)] tracking-[-0.04em]"

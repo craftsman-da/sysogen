@@ -33,7 +33,7 @@ const problems = [
 
 export function Problems() {
   return (
-    <section id="problem" className="relative py-12 lg:py-20">
+    <section id="problem" className="relative py-4 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="flex flex-wrap justify-between items-end gap-6 mb-14">
@@ -56,7 +56,7 @@ export function Problems() {
             <motion.div
               key={it.n}
               variants={staggerItem}
-              className="card-base p-8 cursor-default transition-all duration-300 hover:-translate-y-1 hover:bg-white/4"
+              className="card-base p-4 lg:p-8 cursor-default transition-all duration-300 hover:-translate-y-1 hover:bg-white/4"
             >
               <div className="flex justify-between items-start mb-8">
                 <div className="w-10 h-10 rounded-[10px] flex items-center justify-center text-(--accent) bg-[rgba(79,140,255,0.08)] border border-[rgba(79,140,255,0.18)]">

@@ -24,7 +24,7 @@ const trustItems = [
 
 export function WhyTrust() {
   return (
-    <section id="results" className="relative py-12 lg:py-20">
+    <section id="results" className="relative py-4 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="mb-14 max-w-180">
@@ -39,7 +39,7 @@ export function WhyTrust() {
 
         <AnimateIn delay={0.1}>
           <div className="card-base overflow-hidden">
-            <div className="p-10 lg:p-14">
+            <div className="p-4 lg:p-14">
               <div className="grid sm:grid-cols-2 gap-6 mb-10">
                 {trustItems.map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-start gap-4">

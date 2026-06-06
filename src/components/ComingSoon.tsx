@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, Clock } from "lucide-react";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 const container = {
   hidden: {},
@@ -104,9 +105,9 @@ export function ComingSoon({ title }: { title: string }) {
           variants={item}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Link href="/#contact" className="btn-primary">
+          <CalendlyButton className="btn-primary">
             Book a Discovery Call
-          </Link>
+          </CalendlyButton>
           <Link
             href="/"
             className="btn-ghost flex items-center justify-center gap-2"

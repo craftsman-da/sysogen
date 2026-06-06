@@ -39,7 +39,7 @@ const items = [
 
 export function TrustSignals() {
   return (
-    <section id="why" className="relative py-12 lg:py-20">
+    <section id="why" className="relative py-4 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="mb-14 max-w-180">
@@ -61,7 +61,7 @@ export function TrustSignals() {
               <motion.div
                 key={it.title}
                 variants={staggerItem}
-                className="p-8 transition-colors duration-200 cursor-default bg-(--background) hover:bg-white/2.5"
+                className="p-4 lg:p-8 transition-colors duration-200 cursor-default bg-(--background) hover:bg-white/2.5"
               >
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-(--accent) bg-[rgba(79,140,255,0.08)] border border-[rgba(79,140,255,0.18)]">
                   <it.icon className="w-4.5 h-4.5" strokeWidth={1.5} />

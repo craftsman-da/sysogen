@@ -56,7 +56,7 @@ export function Services() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="services" className="relative py-12 lg:py-20">
+    <section id="services" className="relative py-4 lg:py-20">
       <div className="site-container">
         <AnimateIn>
           <div className="mb-14 max-w-180">

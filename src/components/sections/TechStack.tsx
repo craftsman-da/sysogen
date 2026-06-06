@@ -24,7 +24,7 @@ export function TechStack() {
   return (
     <section
       id="stack"
-      className="relative py-12 lg:py-20"
+      className="relative py-4 lg:py-20"
       style={{
         background: isDark
           ? "linear-gradient(180deg,transparent,rgba(11,16,32,0.4) 30%,rgba(11,16,32,0.4) 70%,transparent)"

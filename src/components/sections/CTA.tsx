@@ -2,6 +2,7 @@
 
 import { AnimateIn } from "@/components/AnimateIn";
 import { useTheme } from "@/components/ThemeProvider";
+import { CalendlyButton } from "@/components/CalendlyButton";
 import { ArrowRight, Mail } from "lucide-react";
 
 const facts = [
@@ -58,10 +59,10 @@ export function CTA() {
               </p>
 
               <div className="flex flex-wrap gap-3.5 items-center">
-                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <CalendlyButton className="btn-primary">
                   Book a discovery call
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </CalendlyButton>
                 <a
                   href="mailto:hello@sysogen.com"
                   className="inline-flex items-center gap-2 text-sm text-(--ink-dim) hover:text-(--foreground) transition-colors"

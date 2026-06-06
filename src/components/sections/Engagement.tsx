@@ -33,7 +33,7 @@ export function Engagement() {
   return (
     <section
       id="approach"
-      className="relative py-12 lg:py-20"
+      className="relative py-4 lg:py-20"
       style={{
         background: isDark
           ? "linear-gradient(180deg,transparent,rgba(11,16,32,0.5) 30%,rgba(11,16,32,0.5) 70%,transparent)"
@@ -73,8 +73,7 @@ export function Engagement() {
             <motion.div
               key={s.n}
               variants={staggerItem}
-              className="relative px-6 py-2"
-              style={{ borderLeft: i === 0 ? "none" : "1px solid var(--border)" }}
+              className={`relative px-6 py-2 border-l border-(--border) ${i === 0 ? "lg:border-l-0" : ""}`}
             >
               <div className="w-11 h-11 rounded-full inline-flex items-center justify-center relative z-10 mb-6 bg-(--background) border border-(--border-strong)">
                 <span className="font-mono-custom text-xs text-(--ink-dim) tracking-wider">

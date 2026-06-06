@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { ArrowRight, Mail, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
+import { CalendlyButton } from "@/components/CalendlyButton";
+import { ContactForm } from "@/components/ContactForm";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -34,94 +37,16 @@ export default function ContactPage() {
                 First call is free; thirty minutes is enough to tell whether we fit.
               </p>
 
-              {/* Cal.com booking button — replace with embed widget once Cal.com is configured */}
-              <a
-                href="https://cal.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <CalendlyButton className="btn-primary">
                 Book a free call Now
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </CalendlyButton>
             </div>
 
             {/* Or send a message */}
             <div className="card-base p-10">
               <h2 className="text-[20px] font-semibold mb-3 tracking-tight text-(--foreground)">Or send a message</h2>
-              <form
-                action="https://formspree.io/f/hello"
-                method="POST"
-                className="space-y-4"
-              >
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[12px] font-mono-custom text-(--ink-mute) tracking-widest uppercase mb-1.5">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      className="w-full px-4 py-2.5 rounded-lg border border-(--border) bg-(--background) text-(--foreground) text-sm focus:outline-none focus:border-(--accent) transition-colors"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[12px] font-mono-custom text-(--ink-mute) tracking-widest uppercase mb-1.5">
-                      Work email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-2.5 rounded-lg border border-(--border) bg-(--background) text-(--foreground) text-sm focus:outline-none focus:border-(--accent) transition-colors"
-                      placeholder="you@company.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[12px] font-mono-custom text-(--ink-mute) tracking-widest uppercase mb-1.5">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    className="w-full px-4 py-2.5 rounded-lg border border-(--border) bg-(--background) text-(--foreground) text-sm focus:outline-none focus:border-(--accent) transition-colors"
-                    placeholder="Company name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[12px] font-mono-custom text-(--ink-mute) tracking-widest uppercase mb-1.5">
-                    What are you working on?
-                  </label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={4}
-                    className="w-full px-4 py-2.5 rounded-lg border border-(--border) bg-(--background) text-(--foreground) text-sm focus:outline-none focus:border-(--accent) transition-colors resize-none"
-                    placeholder="Tell us what you're trying to ship..."
-                  />
-                </div>
-                <div>
-                  <label className="block text-[12px] font-mono-custom text-(--ink-mute) tracking-widest uppercase mb-1.5">
-                    How did you hear about us?
-                  </label>
-                  <input
-                    type="text"
-                    name="source"
-                    className="w-full px-4 py-2.5 rounded-lg border border-(--border) bg-(--background) text-(--foreground) text-sm focus:outline-none focus:border-(--accent) transition-colors"
-                    placeholder="LinkedIn, referral, Google, etc."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn-primary w-full justify-center"
-                >
-                  Send message
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
 
