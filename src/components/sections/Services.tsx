@@ -87,7 +87,7 @@ export function Services() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)]">
                     {/* Left */}
-                    <div className="p-9 md:border-r border-b md:border-b-0 border-(--border)">
+                    <div className="p-4 md:p-9 md:border-r border-b md:border-b-0 border-(--border)">
                       <div className="flex items-center gap-3 mb-5">
                         <div
                           className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
@@ -110,7 +110,7 @@ export function Services() {
                     </div>
 
                     {/* Right */}
-                    <div className="p-9">
+                    <div className="p-4 md:p-9">
                       <ul className="grid gap-3">
                         {p.bullets.map((b, k) => (
                           <li key={k} className="flex items-start gap-3.5 text-[14.5px] text-(--foreground)">

@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id='top'
-      className='relative  overflow-hidden py-40 flex flex-col justify-end'
+      className='relative  overflow-hidden pt-40 pb-20 flex flex-col justify-end'
     >
       {/* Aurora blobs */}
       <div aria-hidden='true' className='absolute  inset-0 pointer-events-none'>
